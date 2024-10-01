@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer JS</title>
+    <style>
+        .color {
+            color: magenta;
+        }
+        .tipoletra {
+            font-size: 200px;
+            font-style: oblique;
+        }
+        .cuerpo {
+            display: flex;
+            flex-direction: column;
+        }
+        .encabezado {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="cuerpo">
+    <h3 id="titulo1" class="encabezado">Hola Mundo</h3>
+
+    <button id="btn1" onclick="cambiartitulo()">Click aqui para Bonk</button>
+    <button onclick="removercambios()">Reiniciar Bonk</button>
+</body>
+<script>
+    function cambiartitulo(){
+        var elemento = document.getElementById("titulo1");
+        elemento.textContent = 'Bonk!';
+        elemento.classList.add('color');
+        elemento.classList.add('tipoletra')
+    }
+    function removercambios(){
+        var elemento = document.getElementById('titulo1')
+        elemento.textContent = 'Hola Mundo'
+        elemento.classList.remove('color')
+        elemento.classList.remove('tipoletra')
+    }
+</script>
+</html>
